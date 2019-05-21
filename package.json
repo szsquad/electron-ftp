@@ -1,0 +1,17 @@
+{
+  "name": "sz-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "start": "sz run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "babel-loader": "^8.0.6",
+    "happypack": "^5.0.1"
+  }
+}
