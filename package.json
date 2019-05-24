@@ -5,12 +5,13 @@
   "main": "main.js",
   "dependencies": {
     "electron": "^5.0.1",
+    "ftp-deploy": "^2.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "scripts": {
     "start": "sz run",
-    "electron-start": "electron ."
+    "electron-start": "electron --inspect=5858 ."
   },
   "author": "",
   "license": "ISC",

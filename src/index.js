@@ -7,15 +7,34 @@ ipcRenderer.on('result', (event, arg) => {
 })
 
 class App extends React.Component {
+  constructor() {
+    super();
+    const projects = window.localStorage.projectUrls.split(',');
+    this.state = {
+      projects,
+    }
+  }
 
-  sendMessage = () => {
-    ipcRenderer.send('read', 'ping')
+  sendMessage = (url) => {
+    console.log('发送消息....');
+    
+    ipcRenderer.send('projectUrl', url)
   }
 
   render() {
-    return <div>
-      <button onClick={this.sendMessage}>Click</button>
-    </div >
+    const { projects } = this.state;
+    return (
+      <div>
+        <ul>
+          {
+            projects.map((project, key) => <li key={key}>
+              <div>{project}</div>
+              <button onClick={() => this.sendMessage(project)}>打包</button>
+            </li>)
+          }
+        </ul>
+      </div >
+    )
   }
 }
 
