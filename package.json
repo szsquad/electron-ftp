@@ -2,16 +2,26 @@
   "name": "sz-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^5.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "scripts": {
-    "start": "sz run"
+    "start": "sz run",
+    "electron-start": "electron ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "happypack": "^5.0.1"
+    "electron-reload": "^1.4.0",
+    "happypack": "^5.0.1",
+    "webpack": "^4.32.0",
+    "webpack-dev-server": "^3.4.1"
   }
 }
