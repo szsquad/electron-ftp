@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "sz run & npm run electron-start",
-    "electron-start": "electron --inspect=5858 ."
+    "electron-start": "electron --inspect=5858 .",
+    "electron:dev": "nodemon --watch . --exec 'electron . --debug'"
   },
   "author": "",
   "license": "ISC",

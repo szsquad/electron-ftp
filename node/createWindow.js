@@ -1,4 +1,4 @@
-const { BrowserWindow, Tray, } = require('electron');
+const { BrowserWindow, Tray } = require('electron');
 const electron = require('electron')
 const path = require('path');
 
@@ -8,7 +8,7 @@ module.exports = function createWindow() {
 
   win = new BrowserWindow({
     width: 600,
-    height: 600,
+    height: 300,
     show: false,
     frame: false,
     webPreferences: {
@@ -17,7 +17,8 @@ module.exports = function createWindow() {
   })
 
   // 设置mac 菜单栏图标
-  const iconPath = path.join(__dirname, '/assest/icon.png');
+  const iconPath = path.join(process.cwd(), '/assest/icon.png');
+  
   tray = new Tray(iconPath);
   tray.setToolTip('This is my application.')
 
