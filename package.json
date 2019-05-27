@@ -10,7 +10,7 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "start": "sz run",
+    "start": "sz run & npm run electron-start",
     "electron-start": "electron --inspect=5858 ."
   },
   "author": "",

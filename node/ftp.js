@@ -10,9 +10,9 @@ module.exports = function (url) {
       password: 'fifo0016log',
       host: '10.0.10.37',
       port: 15387,
-      localRoot: url,
+      localRoot: path.join(url, 'build'),
       remoteRoot: path.join('/web', projectName[projectName.length - 1]),
-      include: ["build/*"],
+      include: ["*"],
       deleteRemote: true,
     }
 
