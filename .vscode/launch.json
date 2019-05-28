@@ -9,9 +9,9 @@
       "request": "launch",
       "name": "Debug Main Porcess",
       "runtimeExecutable": "nodemon",
-      "program": "${workspaceFolder}/main.js",
+      "program": "${workspaceFolder}/src/main/main.js",
       "protocol": "inspector",
-      "args": [
+      "runtimeArgs": [
         "--watch",
         "src/main",
         "--exec",
