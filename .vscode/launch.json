@@ -8,10 +8,14 @@
       "type": "node",
       "request": "launch",
       "name": "Debug Main Porcess",
-      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeExecutable": "nodemon",
       "program": "${workspaceFolder}/main.js",
       "protocol": "inspector",
       "args": [
+        "--watch",
+        "src/main",
+        "--exec",
+        "electron",
         "."
       ],
       "restart": true

@@ -1,6 +1,6 @@
 const { app } = require('electron');
-const createWindow = require('./node/createWindow');
-require('./node/index');
+const createWindow = require('./createWindow');
+require('./init');
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 
@@ -16,6 +16,6 @@ app.on('window-all-closed', () => {
 app.on('activate', () => {
   // 在macOS上，点击打开
   // if (win === null) {
-  createWindow()
+  // createWindow()
   // }
 })

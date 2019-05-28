@@ -2,7 +2,7 @@
   "name": "sz-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "dependencies": {
     "electron": "^5.0.1",
     "ftp-deploy": "^2.3.3",
@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "sz run & npm run electron-start",
-    "electron-start": "electron --inspect=5858 .",
-    "electron:dev": "nodemon --watch . --exec 'electron . --debug'"
+    "electron-start": "electron --inspect=5858 src/main",
+    "electron:dev": "nodemon --watch src/main --exec 'electron . --debug'"
   },
   "author": "",
   "license": "ISC",
