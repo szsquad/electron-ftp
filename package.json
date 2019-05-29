@@ -7,7 +7,8 @@
     "electron": "^5.0.1",
     "ftp-deploy": "^2.3.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   },
   "scripts": {
     "start": "sz run & npm run electron-start",
