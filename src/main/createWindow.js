@@ -17,7 +17,7 @@ module.exports = function createWindow() {
   })
 
   // 设置mac 菜单栏图标
-  const iconPath = path.join(process.cwd(), '/assest/icon.png');
+  const iconPath = path.join(process.cwd(), '/asset/icon.png');
   
   tray = new Tray(iconPath);
   tray.setToolTip('This is my application.')
