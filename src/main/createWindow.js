@@ -7,10 +7,12 @@ module.exports = function createWindow() {
   let tray
 
   win = new BrowserWindow({
-    width: 600,
-    height: 300,
-    show: false,
-    frame: false,
+    // width: 600,
+    width: 1000,
+    // height: 300,
+    height: 800,
+    // show: false,
+    // frame: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -30,7 +32,7 @@ module.exports = function createWindow() {
   })
 
   win.on('blur', () => {
-    win.hide();
+    // win.hide();
   })
 
 
