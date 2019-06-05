@@ -1,8 +1,16 @@
 import React, { createContext, Component } from 'react';
 
-const context = createContext()
+const context = createContext({});
 
-export class ContextProvider extends Component {
+export interface IState {
+  projectUrls: string
+  /**
+   * 设置项目路径
+   */
+  setProjectUrls: (projectUrl: string) => void
+}
+
+export class ContextProvider extends Component<any, IState> {
 
   setProjectUrls = (projectUrls) => {
     this.setState({ projectUrls }, () => {
@@ -11,7 +19,7 @@ export class ContextProvider extends Component {
   }
 
   state = {
-    projectUrls: window.localStorage.getItem('projectUrls'),
+    projectUrls: window.localStorage.getItem('projectUrls')!,
     setProjectUrls: this.setProjectUrls,
   }
 

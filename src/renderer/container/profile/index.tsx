@@ -1,14 +1,17 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { remote } from 'electron';
-import { consumer } from '../../context/consumer';
+import { IState } from '@/renderer/context';
+import { consumer } from '@/renderer/context/consumer';
 
-@consumer
-@withRouter
-export default class Profile extends React.Component {
+interface IProps extends RouteComponentProps, IState{}
+
+@(consumer as any)
+@(withRouter as any)
+export default class Profile extends React.Component<IProps> {
 
   chooseWorkPlace = () => {
-    const { setProjectUrls, projectUrls } = this.props;
+    const { projectUrls, setProjectUrls } = this.props;
     const { dialog } = remote;
     dialog.showOpenDialog({
       properties: [
@@ -22,7 +25,7 @@ export default class Profile extends React.Component {
 
   render() {
     const { history } = this.props;
-    
+
     return (
       <div>
         <button onClick={() => { history.goBack(); }}>返回</button>
