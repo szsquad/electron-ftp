@@ -14,10 +14,9 @@
         "src/*"
       ]
     }
-  },
-  "exclude": [
-    "node_modules",
-    "build",
-    "src/main"
-  ]
+  }
+  // "exclude": [
+  //   "node_modules", 解决d.ts 无效
+  //   "build"
+  // ]
 }

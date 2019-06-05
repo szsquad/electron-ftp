@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { ipcRenderer } from 'electron';
-import profile from '@/renderer/assets/profile.png';
+import profile from '@/renderer/asset/profile.png';
 import { IState } from '@/renderer/context';
 import { consumer } from '@/renderer/context/consumer';
 import './index.less';
