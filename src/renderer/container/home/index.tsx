@@ -6,28 +6,27 @@ import { IState } from '@/renderer/context';
 import { consumer } from '@/renderer/context/consumer';
 import './index.less';
 
-interface IProps extends RouteComponentProps, IState{}
+interface Props extends RouteComponentProps, IState { }
 
 @(consumer as any)
 @(withRouter as any)
-class Home extends React.Component<IProps, any> {
-  constructor(props) {
+class Home extends React.Component<Props, any> {
+  private constructor(props) {
     super(props);
     this.state = {};
-
     // 构建并上传ftp 成功
     ipcRenderer.on('buildAndUploadDone', (event, arg) => {
       console.log(arg);
     });
   }
 
-  sendMessage = (url: string) => {
+  private sendMessage = (url: string) => {
     ipcRenderer.send('buildAndUpload', url);
   }
 
-  render() {
+  public render() {
     const { history, projectUrls } = this.props;
-    let projects: string[] = projectUrls.split(',').filter(pro => pro !== '');
+    const projects: string[] = projectUrls.split(',').filter(pro => pro !== '');
 
     return (
       <div className="home">
@@ -47,4 +46,4 @@ class Home extends React.Component<IProps, any> {
   }
 }
 
-export default Home
+export default Home;

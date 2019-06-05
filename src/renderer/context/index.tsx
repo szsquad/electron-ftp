@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { createContext, Component } from 'react';
 
 const context = createContext({});
@@ -11,11 +12,10 @@ export interface IState {
 }
 
 export class ContextProvider extends Component<any, IState> {
-
   setProjectUrls = (projectUrls) => {
     this.setState({ projectUrls }, () => {
       window.localStorage.setItem('projectUrls', projectUrls);
-    })
+    });
   }
 
   state = {
@@ -24,10 +24,13 @@ export class ContextProvider extends Component<any, IState> {
   }
 
   render() {
-    return <context.Provider value={this.state}>
-      {this.props.children}
-    </context.Provider>
+    const { children } = this.props;
+    return (
+      <context.Provider value={this.state}>
+        {children}
+      </context.Provider>
+    );
   }
 }
 
-export const Consumer = context.Consumer;
+export const { Consumer } = context;
