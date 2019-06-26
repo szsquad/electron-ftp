@@ -5,11 +5,11 @@ import Home from './container/home';
 import Profile from './container/profile';
 
 const App = () => (
-	<ContextProvider>
-		<BrowserRouter>
-			<Route exact path="/" component={Home} />
-			<Route path="/profile" component={Profile} />
-		</BrowserRouter>
-	</ContextProvider>
+  <ContextProvider>
+    <BrowserRouter>
+      <Route exact path="/" component={Home} />
+      <Route path="/profile" component={Profile} />
+    </BrowserRouter>
+  </ContextProvider>
 );
 export default App;

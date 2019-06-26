@@ -9,20 +9,9 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
-  // globals: {
-  //   Atomics: 'readonly',
-  //   SharedArrayBuffer: 'readonly',
-  // },
-  // parserOptions: {
-  //   ecmaFeatures: {
-  //     jsx: true,
-  //   },
-  //   ecmaVersion: 2018,
-  //   sourceType: 'module',
-  // },
   plugins: [
-    // 'react',
     "@typescript-eslint",
+    "react-hooks",
   ],
   settings: {
     'import/resolver': {
@@ -48,6 +37,9 @@ module.exports = {
     "@typescript-eslint/indent": 'off',
     "react/sort-comp": 'off',
     "@typescript-eslint/explicit-function-return-type": 'off',
-    "@typescript-eslint/no-explicit-any": 'off'
+    "@typescript-eslint/no-explicit-any": 'off',
+    "jsx-a11y/no-static-element-interactions": 'off',
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn"
   }
 };

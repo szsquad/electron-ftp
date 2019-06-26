@@ -3,24 +3,26 @@ import React, { createContext, Component } from 'react';
 
 const context = createContext({});
 
+export type projectType = { projectName: string, directoryPath: string };
+
 export interface IState {
-  projectUrls: string
+  projects: projectType[],
   /**
    * 设置项目路径
    */
-  setProjectUrls: (projectUrl: string) => void
+  setProjects: (projectUrl: projectType[]) => void
 }
 
 export class ContextProvider extends Component<any, IState> {
-  setProjectUrls = (projectUrls) => {
-    this.setState({ projectUrls }, () => {
-      window.localStorage.setItem('projectUrls', projectUrls);
+  setProjects = (projects) => {
+    this.setState({ projects }, () => {
+      window.localStorage.setItem('projects', projects);
     });
   }
 
   state = {
-    projectUrls: window.localStorage.getItem('projectUrls')!,
-    setProjectUrls: this.setProjectUrls,
+    projects: JSON.parse(window.localStorage.getItem('projects')),
+    setProjects: this.setProjects,
   }
 
   render() {
