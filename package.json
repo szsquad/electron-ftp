@@ -5,7 +5,7 @@
   "main": "src/main/main.js",
   "dependencies": {
     "antd": "^3.19.3",
-    "electron": "^5.0.1",
+    "electron": "^9.4.0",
     "ftp-deploy": "^2.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
